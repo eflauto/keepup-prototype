@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 253599976}
   - component: {fileID: 253599975}
   m_Layer: 5
-  m_Name: btn_Olive
+  m_Name: btn_olive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,7 +312,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 253599976}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 753353941}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: olive
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &253599976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -808,6 +820,65 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725160604}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &753353939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 753353940}
+  - component: {fileID: 753353941}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &753353940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753353939}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.23355, y: 1.99278, z: 2.18957}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &753353941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753353939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e731ed8d3491c9b2bb79a157265f7a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  toppingNames:
+  - onion
+  - cheese
+  - pepperoni
+  - pepper
+  - olive
+  - tomato
+  toppingTextures:
+  - {fileID: 2800000, guid: e14a21272fc240469a9bf928256ac400, type: 3}
+  - {fileID: 2800000, guid: 3cb8f166d41e1488d94252787e5c6258, type: 3}
+  - {fileID: 2800000, guid: df72f319514f7cbc4a048b3bf2d9df47, type: 3}
+  - {fileID: 2800000, guid: 110c997eca30fb2a3a2b49dd5b1ef88b, type: 3}
+  - {fileID: 2800000, guid: 3170dff1826c1389fbc1a96363ee0258, type: 3}
+  - {fileID: 2800000, guid: 28c559c19546608ed94aac99e6646410, type: 3}
+  baseMaterial: {fileID: 2100000, guid: d8350a9db8b3012b184a7096c15788af, type: 2}
 --- !u!1 &799476821
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,7 +1004,7 @@ GameObject:
   - component: {fileID: 850956897}
   - component: {fileID: 850956896}
   m_Layer: 5
-  m_Name: btn_Pepper
+  m_Name: btn_pepper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1001,7 +1072,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 850956897}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 753353941}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pepper
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &850956897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1204,6 +1287,124 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &948855560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 948855561}
+  - component: {fileID: 948855564}
+  - component: {fileID: 948855563}
+  - component: {fileID: 948855562}
+  m_Layer: 0
+  m_Name: Topping_Quad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &948855561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948855560}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.70710653, y: -0, z: -0, w: 0.7071071}
+  m_LocalPosition: {x: 0, y: 1.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2097847395}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!64 &948855562
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948855560}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &948855563
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948855560}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d8350a9db8b3012b184a7096c15788af, type: 2}
+  - {fileID: 2100000, guid: d8350a9db8b3012b184a7096c15788af, type: 2}
+  - {fileID: 2100000, guid: d8350a9db8b3012b184a7096c15788af, type: 2}
+  - {fileID: 2100000, guid: d8350a9db8b3012b184a7096c15788af, type: 2}
+  - {fileID: 2100000, guid: d8350a9db8b3012b184a7096c15788af, type: 2}
+  - {fileID: 2100000, guid: d8350a9db8b3012b184a7096c15788af, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &948855564
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948855560}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &978557620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1810,7 +2011,7 @@ GameObject:
   - component: {fileID: 1348122054}
   - component: {fileID: 1348122053}
   m_Layer: 5
-  m_Name: btn_Tomato
+  m_Name: btn_tomato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1878,7 +2079,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1348122054}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 753353941}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tomato
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1348122054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1930,7 +2143,7 @@ GameObject:
   - component: {fileID: 1353406013}
   - component: {fileID: 1353406012}
   m_Layer: 5
-  m_Name: btn_Pepperoni
+  m_Name: btn_pepperoni
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1998,7 +2211,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1353406013}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 753353941}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pepperoni
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1353406013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2050,7 +2275,7 @@ GameObject:
   - component: {fileID: 1431967044}
   - component: {fileID: 1431967043}
   m_Layer: 5
-  m_Name: btn_Cheese
+  m_Name: btn_cheese
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2118,7 +2343,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1431967044}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 753353941}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: cheese
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1431967044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2361,7 +2598,7 @@ GameObject:
   - component: {fileID: 1874364489}
   - component: {fileID: 1874364488}
   m_Layer: 5
-  m_Name: btn_Onion
+  m_Name: btn_onion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2429,7 +2666,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1874364489}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 753353941}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: onion
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1874364489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2691,7 +2940,8 @@ Transform:
   m_LocalPosition: {x: 0.059, y: 1.4899997, z: 2.663}
   m_LocalScale: {x: 1.5, y: 0.05, z: 1.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 948855561}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
@@ -2705,3 +2955,4 @@ SceneRoots:
   - {fileID: 2097847395}
   - {fileID: 388506088}
   - {fileID: 1769769812}
+  - {fileID: 753353940}
