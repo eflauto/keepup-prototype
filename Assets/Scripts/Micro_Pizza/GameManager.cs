@@ -12,15 +12,20 @@ public class GameManager : MonoBehaviour
     private GameObject _toppingObject;
     private MeshRenderer _toppingMeshRenderer;
     private List<string> _toppings = new();
+    private Timer _timer;
 
     private void Start()
     {
         baseMaterial.mainTexture = null;
         baseMaterial.color = new Color(255, 255, 255, 0);
+        
         _toppingObject = GameObject.Find("Pizza/Topping_Quad");
         _toppingMeshRenderer = _toppingObject.GetComponent<MeshRenderer>();
         _toppingDictionary = toppingNames.Zip(toppingTextures, (k, v) => new { Key = k, Value = v })
             .ToDictionary(x => x.Key, x => x.Value);
+        
+        _timer = GetComponent<Timer>();
+        _timer.StartTimer(5);
     }
 
     private void AddTopping(string topping)
