@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
@@ -15,9 +16,15 @@ public class GameManager : MonoBehaviour
     private GameObject _toppingObject;
     private MeshRenderer _toppingMeshRenderer;
     private readonly List<string> _toppings = new();
+    
     private Timer _timer;
+    
     private TextMeshProUGUI _requestText;
     private List<string> _requestList;
+
+    private GameObject _resultsObject;
+    
+    private ButtonSelectionManager _buttonSelectionManager;
 
     private void Start()
     {
@@ -36,6 +43,10 @@ public class GameManager : MonoBehaviour
         _timer.onTimerEnd.AddListener(OnTimerEnd);
         
         _requestText = GameObject.Find("UI/txt_Request").GetComponent<TextMeshProUGUI>();
+
+        _resultsObject = GameObject.Find("UI/Results");
+        
+        _buttonSelectionManager = GameObject.Find("UI").GetComponent<ButtonSelectionManager>();
         
         GenerateAndDisplayRequest();
     }
@@ -74,6 +85,17 @@ public class GameManager : MonoBehaviour
         _requestList.Sort();
         _toppings.Sort();
 
-        Debug.Log(_requestList.SequenceEqual(_toppings) ? "You win!" : "You lose!");
+        for (var i = 0; i < _resultsObject.transform.childCount; i++)
+        {
+            _resultsObject.transform.GetChild(i).gameObject.SetActive(true);
+        }
+        
+        var resultsText = GameObject.Find("UI/Results/txt_Results").GetComponent<TextMeshProUGUI>();
+        var replayButton = GameObject.Find("UI/Results/btn_Replay").GetComponent<Button>();
+
+        _buttonSelectionManager.Delete();
+        _requestText.text = "";
+        resultsText.text = _requestList.SequenceEqual(_toppings) ? "You win!" : "You lose!";
+        replayButton.Select();
     }
 }

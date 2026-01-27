@@ -17,22 +17,30 @@ public class ButtonSelectionManager : MonoBehaviour
     private void Start()
     {
         var userInterface = GameObject.Find("UI");
-        var firstButtonObject = userInterface.transform.GetChild(0).gameObject;
         _navigateAction = InputSystem.actions.FindAction("Navigate");
         _hand = new GameObject("Hand");
         _handImage = _hand.AddComponent<Image>();
         _handImage.sprite = handSprite;
         _hand.transform.SetParent(userInterface.transform);
 
-        try
+        for (var i = 0; i < userInterface.transform.childCount; i++)
         {
-            _selectedButton = firstButtonObject.GetComponent<Button>();
-            _selectedButton.Select();
-            MoveCursorToButton(firstButtonObject);
-        }
-        catch (NullReferenceException e)
-        {
-            Debug.Log(e.Message);
+            if (!userInterface.transform.GetChild(i).name.Contains("btn_")) continue;
+
+            var potentialButtonObject = userInterface.transform.GetChild(i).gameObject;
+
+            try
+            {
+                _selectedButton = potentialButtonObject.GetComponent<Button>();
+                _selectedButton.Select();
+                MoveCursorToButton(potentialButtonObject);
+                
+                break;
+            }
+            catch (NullReferenceException e)
+            {
+                Debug.Log(e.Message);
+            }
         }
     }
     
@@ -53,5 +61,11 @@ public class ButtonSelectionManager : MonoBehaviour
         _hand.transform.position = new Vector2(rightXPos, bottomYPos);
         
         if (!_hand.activeInHierarchy) _hand.SetActive(true);
+    }
+
+    public void Delete()
+    {
+        Destroy(_hand);
+        Destroy(this);
     }
 }
