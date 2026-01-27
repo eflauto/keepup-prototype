@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     
     private void Start()
     {
-        _timerText = GameObject.Find("UI/text_timer").GetComponent<TextMeshProUGUI>();
+        _timerText = GameObject.Find("UI/txt_Timer").GetComponent<TextMeshProUGUI>();
     }
 
     private void Update()

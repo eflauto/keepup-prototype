@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 253599976}
   - component: {fileID: 253599975}
   m_Layer: 5
-  m_Name: btn_olive
+  m_Name: btn_Olive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,7 +322,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: olive
+          m_StringArgument: Olive
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &253599976
@@ -867,12 +867,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   toppingNames:
-  - onion
-  - cheese
-  - pepperoni
-  - pepper
-  - olive
-  - tomato
+  - Onion
+  - Cheese
+  - Pepperoni
+  - Pepper
+  - Olive
+  - Tomato
   toppingTextures:
   - {fileID: 2800000, guid: e14a21272fc240469a9bf928256ac400, type: 3}
   - {fileID: 2800000, guid: 3cb8f166d41e1488d94252787e5c6258, type: 3}
@@ -1018,7 +1018,7 @@ GameObject:
   - component: {fileID: 850956897}
   - component: {fileID: 850956896}
   m_Layer: 5
-  m_Name: btn_pepper
+  m_Name: btn_Pepper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1096,7 +1096,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: pepper
+          m_StringArgument: Pepper
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &850956897
@@ -1147,7 +1147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 936618720}
   m_Layer: 0
-  m_Name: Toppings
+  m_Name: Ingredients
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1314,7 +1314,7 @@ GameObject:
   - component: {fileID: 948855563}
   - component: {fileID: 948855562}
   m_Layer: 0
-  m_Name: Topping_Quad
+  m_Name: Toppings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1798,7 +1798,7 @@ GameObject:
   - component: {fileID: 1144003026}
   - component: {fileID: 1144003025}
   m_Layer: 5
-  m_Name: text_timer
+  m_Name: txt_Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2162,7 +2162,7 @@ GameObject:
   - component: {fileID: 1348122054}
   - component: {fileID: 1348122053}
   m_Layer: 5
-  m_Name: btn_tomato
+  m_Name: btn_Tomato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2240,7 +2240,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: tomato
+          m_StringArgument: Tomato
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1348122054
@@ -2294,7 +2294,7 @@ GameObject:
   - component: {fileID: 1353406013}
   - component: {fileID: 1353406012}
   m_Layer: 5
-  m_Name: btn_pepperoni
+  m_Name: btn_Pepperoni
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2372,7 +2372,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: pepperoni
+          m_StringArgument: Pepperoni
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1353406013
@@ -2426,7 +2426,7 @@ GameObject:
   - component: {fileID: 1431967044}
   - component: {fileID: 1431967043}
   m_Layer: 5
-  m_Name: btn_cheese
+  m_Name: btn_Cheese
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2504,7 +2504,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: cheese
+          m_StringArgument: Cheese
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1431967044
@@ -2749,7 +2749,7 @@ GameObject:
   - component: {fileID: 1874364489}
   - component: {fileID: 1874364488}
   m_Layer: 5
-  m_Name: btn_onion
+  m_Name: btn_Onion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2827,7 +2827,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: onion
+          m_StringArgument: Onion
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1874364489
