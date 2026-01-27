@@ -1,8 +1,11 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
+    public UnityEvent onTimerEnd;
+    
     private TextMeshProUGUI _timerText;
     private bool _isTimerRunning;
     private float _currentTime;
@@ -22,6 +25,7 @@ public class Timer : MonoBehaviour
         {
             _isTimerRunning = false;
             _currentTime = 0;
+            onTimerEnd.Invoke();
 
             return;
         }

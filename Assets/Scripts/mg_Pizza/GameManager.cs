@@ -1,6 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,9 +16,13 @@ public class GameManager : MonoBehaviour
     private MeshRenderer _toppingMeshRenderer;
     private readonly List<string> _toppings = new();
     private Timer _timer;
+    private TextMeshProUGUI _requestText;
+    private List<string> _requestList;
 
     private void Start()
     {
+        Random.InitState((int)DateTime.Now.Ticks);
+        
         baseMaterial.mainTexture = null;
         baseMaterial.color = new Color(255, 255, 255, 0);
         
@@ -26,6 +33,11 @@ public class GameManager : MonoBehaviour
         
         _timer = GetComponent<Timer>();
         _timer.StartTimer(5);
+        _timer.onTimerEnd.AddListener(OnTimerEnd);
+        
+        _requestText = GameObject.Find("UI/txt_Request").GetComponent<TextMeshProUGUI>();
+        
+        GenerateAndDisplayRequest();
     }
 
     private void AddTopping(string topping)
@@ -40,10 +52,28 @@ public class GameManager : MonoBehaviour
         _toppingMeshRenderer.materials = materialList;
     }
 
+    private void GenerateAndDisplayRequest()
+    {
+        var toppingAmount = Random.Range(1, toppingNames.Count + 1);
+        _requestList = new List<string>(toppingNames);
+
+        _requestList = _requestList.OrderBy(x => Guid.NewGuid()).ToList();
+        _requestList.RemoveRange(toppingAmount, _requestList.Count - toppingAmount);
+        _requestText.text = string.Join(", ", _requestList.ToArray());
+    }
+
     public void OnButtonClick(string topping)
     {
         if (_toppings.Contains(topping)) return;
         
         AddTopping(topping);
+    }
+
+    private void OnTimerEnd()
+    {
+        _requestList.Sort();
+        _toppings.Sort();
+
+        Debug.Log(_requestList.SequenceEqual(_toppings) ? "You win!" : "You lose!");
     }
 }
